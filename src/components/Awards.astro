@@ -1,0 +1,53 @@
+---
+const awards = [
+  {
+    icon: "award",
+    title: "Dean's List Honor",
+    subtitle: "Academic Year 2024",
+    desc: "Achieved highest GPA in the BBA Program in International Hospitality Management with GPA 3.83.",
+  },
+  {
+    icon: "star",
+    title: "Forbes Luxury Service Excellence Training",
+    subtitle: "The Athenee Hotel, A Luxury Collection Hotel · 2025",
+    desc: "Certified in Forbes Travel Guide luxury service standards for Arrival and Departure Experience during internship.",
+  },
+  {
+    icon: "globe",
+    title: "International Speaker",
+    subtitle: "2023 – 2025",
+    desc: "Featured speaker, panelist, and moderator at 3+ international hospitality conferences including TTF, PATA, and PHIST.",
+  },
+  {
+    icon: "trophy",
+    title: "1st Runner Up × 2 Global Competitions",
+    subtitle: "Accor TakeOff! 2024 · The-ICE GRM Challenge 2025",
+    desc: "Back-to-back international competition placements in innovation and revenue management strategy.",
+  },
+];
+---
+
+<section id="awards" class="px-6 py-20 bg-cream">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2 text-gold">Recognition</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy">Certifications & Awards</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {awards.map((a) => (
+        <div class="fade-in card-hover p-6 rounded-xl bg-white border-l-4 border-gold">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-gold/20">
+              <i data-lucide={a.icon} style="width:24px;height:24px;color:#C19A6B;"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-navy">{a.title}</h3>
+              <p class="text-sm mt-1 text-gold">{a.subtitle}</p>
+              <p class="text-sm mt-2 text-slate">{a.desc}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

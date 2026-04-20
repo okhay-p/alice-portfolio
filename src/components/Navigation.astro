@@ -1,0 +1,38 @@
+---
+---
+
+<nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-cream/90 backdrop-blur-[8px]">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <span class="font-heading text-xl font-bold text-navy">T.H.K.K</span>
+    <div class="hidden md:flex gap-8 text-sm font-medium tracking-wide text-slate">
+      <a href="#hero" class="nav-link hover:opacity-80">Home</a>
+      <a href="#about" class="nav-link hover:opacity-80">About</a>
+      <a href="#experience" class="nav-link hover:opacity-80">Experience</a>
+      <a href="#projects" class="nav-link hover:opacity-80">Projects</a>
+      <a href="#skills" class="nav-link hover:opacity-80">Skills</a>
+      <a href="#activities" class="nav-link hover:opacity-80">Activities</a>
+      <a href="#contact" class="nav-link hover:opacity-80">Contact</a>
+    </div>
+    <button class="md:hidden text-navy" id="menu-toggle">
+      <i data-lucide="menu" style="width:24px;height:24px;"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3 text-sm font-medium text-slate">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+  menu?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => menu?.classList.add('hidden'))
+  );
+</script>

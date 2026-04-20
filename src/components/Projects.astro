@@ -1,0 +1,43 @@
+---
+const projects = [
+  {
+    image: "/images/ibishive.jpeg",
+    badge: "1st Runner Up — Global",
+    badgeIcon: "award",
+    title: "Accor TakeOff! Challenge 2024",
+    desc: "Developed a community-focused CSR Campaign for ibis hotels. The \"ibis-hive\" AR-integrated loyalty program earned 1st runner up globally for its strong concept, feasibility and community relevance.",
+  },
+  {
+    image: "/images/ta.jpeg",
+    badge: "1st Runner Up — International",
+    badgeIcon: "star",
+    title: "The-ICE Global Revenue Management Challenge 2025",
+    desc: "Led a multicultural team to drive revenue growth through strategic analysis and decision-making in a hotel revenue management simulation, demonstrating strong analytical and pricing strategy skills.",
+  },
+];
+---
+
+<section id="projects" class="px-6 py-20 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2 text-gold">Achievements</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy">Notable Projects & Competitions</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      {projects.map((p) => (
+        <div class="fade-in card-hover overflow-hidden rounded-2xl bg-cream">
+          <div class="w-full h-52 overflow-hidden">
+            <img src={p.image} alt={p.title} class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <div class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-medium mb-3 bg-gold/15 text-gold">
+              <i data-lucide={p.badgeIcon} style="width:12px;height:12px;"></i> {p.badge}
+            </div>
+            <h3 class="font-heading text-xl font-bold mb-2 text-navy">{p.title}</h3>
+            <p class="text-sm leading-relaxed text-slate">{p.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

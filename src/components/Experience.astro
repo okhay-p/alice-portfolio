@@ -1,0 +1,102 @@
+---
+const experiences = [
+  {
+    date: "Jan – Jun 2025",
+    title: "Event Services, Sales & Marketing Coordinator — Intern",
+    org: "The Athenee Hotel, A Luxury Collection Hotel, Bangkok",
+    desc: "Managed daily event operations, coordinated corporate and social events, supported client proposals and CRM database, and participated in client meetings and site inspections.",
+    side: "left",
+  },
+  {
+    date: "Mar – Apr 2024",
+    title: "Front-office Supervisor Intern",
+    org: "ASAI Bangkok Sathorn",
+    desc: "Assisted with guest check-in/out and room assignments, analyzed guest feedback, maintained occupancy reports, and collaborated across housekeeping and reservations.",
+    side: "right",
+  },
+  {
+    date: "Oct 2022 – Mar 2023",
+    title: "Operations, F&B & Sales and Marketing Intern",
+    org: "Dusit Princess Srinakarin Hotel, Bangkok",
+    desc: "Rotated across all hotel operational departments including F&B service, kitchen operations, and sales and marketing — gaining comprehensive industry insights.",
+    side: "left",
+  },
+];
+
+const education = {
+  date: "2022 – Expected May 2026",
+  title: "BBA in Hospitality Management",
+  org: "Dusit Thani College, Bangkok",
+  desc: "Cumulative GPA: 3.84 · Class President for 3 years · University's Young Ambassador · Dean's List Honoree",
+};
+---
+
+<section id="experience" class="px-6 py-20 bg-cream">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2 text-gold">My Journey</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy">Experience & Education</h2>
+    </div>
+    <div class="relative">
+      <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-beige"></div>
+
+      {experiences.map((exp) => (
+        <div class="fade-in mb-10 md:flex md:items-start">
+          {exp.side === 'left' ? (
+            <>
+              <div class="hidden md:block md:w-1/2 md:pr-10 md:text-right">
+                <div class="card-hover inline-block p-6 rounded-xl text-left md:text-right bg-white shadow-sm">
+                  <span class="text-xs font-medium px-2 py-1 rounded-full bg-gold/15 text-gold">{exp.date}</span>
+                  <h3 class="font-heading text-lg font-bold mt-3 text-navy">{exp.title}</h3>
+                  <p class="text-sm font-medium mt-1 text-gold">{exp.org}</p>
+                  <p class="text-sm mt-2 text-slate">{exp.desc}</p>
+                </div>
+              </div>
+              <div class="relative flex items-center justify-center w-8 md:absolute md:left-1/2 md:-translate-x-1/2">
+                <div class="w-3 h-3 rounded-full border-2 bg-gold border-cream"></div>
+              </div>
+              <div class="ml-10 md:hidden card-hover p-6 rounded-xl bg-white shadow-sm">
+                <span class="text-xs font-medium px-2 py-1 rounded-full bg-gold/15 text-gold">{exp.date}</span>
+                <h3 class="font-heading text-lg font-bold mt-3 text-navy">{exp.title}</h3>
+                <p class="text-sm font-medium mt-1 text-gold">{exp.org}</p>
+                <p class="text-sm mt-2 text-slate">{exp.desc}</p>
+              </div>
+              <div class="hidden md:block md:w-1/2 md:pl-10"></div>
+            </>
+          ) : (
+            <>
+              <div class="hidden md:block md:w-1/2 md:pr-10"></div>
+              <div class="relative flex items-center justify-center w-8 md:absolute md:left-1/2 md:-translate-x-1/2">
+                <div class="w-3 h-3 rounded-full border-2 bg-gold border-cream"></div>
+              </div>
+              <div class="ml-10 md:ml-0 md:w-1/2 md:pl-10">
+                <div class="card-hover p-6 rounded-xl bg-white shadow-sm">
+                  <span class="text-xs font-medium px-2 py-1 rounded-full bg-gold/15 text-gold">{exp.date}</span>
+                  <h3 class="font-heading text-lg font-bold mt-3 text-navy">{exp.title}</h3>
+                  <p class="text-sm font-medium mt-1 text-gold">{exp.org}</p>
+                  <p class="text-sm mt-2 text-slate">{exp.desc}</p>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      ))}
+
+      <div class="fade-in mb-10 md:flex md:items-start">
+        <div class="hidden md:block md:w-1/2 md:pr-10"></div>
+        <div class="relative flex items-center justify-center w-8 md:absolute md:left-1/2 md:-translate-x-1/2">
+          <div class="w-3 h-3 rounded-full border-2 bg-navy border-cream"></div>
+        </div>
+        <div class="ml-10 md:ml-0 md:w-1/2 md:pl-10">
+          <div class="card-hover p-6 rounded-xl bg-white shadow-sm">
+            <span class="text-xs font-medium px-2 py-1 rounded-full bg-navy/10 text-navy">{education.date}</span>
+            <h3 class="font-heading text-lg font-bold mt-3 text-navy">{education.title}</h3>
+            <p class="text-sm font-medium mt-1 text-gold">{education.org}</p>
+            <p class="text-sm mt-2 text-slate">{education.desc}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

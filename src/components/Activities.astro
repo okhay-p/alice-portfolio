@@ -1,0 +1,67 @@
+---
+const activities = [
+  {
+    image: "/images/president.jpeg",
+    title: "President of IHM Mahogany Batch 27",
+    desc: "Led class initiatives and represented the batch in university activities and academic affairs.",
+  },
+  {
+    image: "/images/ambassador.jpeg",
+    title: "DTC Young Ambassador Project 2022",
+    desc: "Selected as a university ambassador, representing Dusit Thani College in outreach and promotional activities.",
+  },
+  {
+    image: "/images/ttfb.jpeg",
+    title: "Student Speaker — Thailand Tourism Forum 2023",
+    desc: "Invited to share future goals and passion about the hospitality industry at this national forum.",
+  },
+  {
+    image: "/images/shc.jpeg",
+    imgStyle: "object-position: top right;",
+    title: "MC — Sustainable Hospitality Challenge Asia & Africa Semi-Final 2024",
+    desc: "Delivered a satisfactory MC performance at this prestigious global sustainability competition.",
+  },
+  {
+    image: "/images/youth.jpeg",
+    title: "Moderator — PATA Youth Forum 2024",
+    desc: "Facilitated discussions on youth perspectives in tourism and hospitality at the PATA regional forum.",
+  },
+  {
+    image: "/images/hicap.jpeg",
+    title: "Student Ambassador — HICAP 2025",
+    desc: "Represented student voices at the Hotel Investment Conference Asia Pacific 2025.",
+  },
+  {
+    image: "/images/knowledge-forum.jpeg",
+    title: "Panelist — PATA Knowledge Forum 2025",
+    desc: "Shared insights on youth leadership, nurturing the Gen Z workforce, and the future of tourism.",
+  },
+  {
+    image: "/images/phist.jpeg",
+    title: "Speaker — PHIST 2025 (Sustainable Project)",
+    desc: "Served as a moderator leading discussions on sustainability and hospitality innovation with 30 high-school students.",
+  },
+];
+---
+
+<section id="activities" class="px-6 py-20 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2 text-gold">Beyond the Classroom</p>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy">Extracurricular Activities</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {activities.map((a) => (
+        <div class="fade-in card-hover overflow-hidden rounded-2xl bg-cream">
+          <div class="w-full h-40 overflow-hidden">
+            <img src={a.image} alt={a.title} class="w-full h-full object-cover" style={a.imgStyle} />
+          </div>
+          <div class="p-5">
+            <h3 class="font-heading text-base font-bold mb-1 text-navy">{a.title}</h3>
+            <p class="text-xs text-slate">{a.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
