@@ -1,8 +1,5 @@
 ---
 import '../styles/global.css';
-import { inject } from '@vercel/analytics';
-
-inject();
 
 interface Props {
   title?: string;
@@ -41,6 +38,10 @@ const { title = "Thet Hnin Ko Ko (Alice) — Hospitality Portfolio" } = Astro.pr
         { threshold: 0.1 }
       );
       document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    </script>
+    <script>
+      import { inject } from '@vercel/analytics';
+      inject();
     </script>
   </body>
 </html>
